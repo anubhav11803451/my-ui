@@ -1,0 +1,54 @@
+{
+    "eslint.workingDirectories": [{ "pattern": "./packages/*/" }],
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        // "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        // "editor.defaultFormatter": "vscode.typescript-language-features",
+        "editor.fontFamily": "'Fira Code'",
+        "editor.fontLigatures": true,
+        "editor.codeActionsOnSave": {
+            // For ESLint
+            "source.fixAll.eslint": true
+            // // For TSLint
+            // "source.fixAll.tslint": true,
+            // // For Stylelint
+            // "source.fixAll.stylelint": true
+        }
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.fontFamily": "'Fira Code'",
+        "editor.fontLigatures": true,
+        // "editor.defaultFormatter": "vscode.typescript-language-features",
+        // "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.codeActionsOnSave": {
+            // For ESLint
+            "source.fixAll.eslint": true
+            // // For TSLint
+            // "source.fixAll.tslint": true,
+            // // For Stylelint
+            // "source.fixAll.stylelint": true
+        }
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.fontFamily": "'Fira Code'",
+        "editor.fontLigatures": true,
+        // "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        // "editor.defaultFormatter": "vscode.typescript-language-features",
+        "editor.codeActionsOnSave": {
+            // For ESLint
+            "source.fixAll.eslint": true
+            // // For TSLint
+            // "source.fixAll.tslint": true,
+            // // For Stylelint
+            // "source.fixAll.stylelint": true
+        }
+    },
+    "files.associations": {
+        "*.js": "javascript",
+        "*.jsx": "javascriptreact",
+        "*.ts": "typescript",
+        "*.tsx": "typescriptreact"
+    }
+}
