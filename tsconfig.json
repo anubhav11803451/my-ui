@@ -101,11 +101,17 @@
 
         /* Completeness */
         // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
-        "skipLibCheck": true,
+        "skipLibCheck": true
         /* Skip type checking all .d.ts files. */
-        "plugins": [{ "name": "typescript-tslint-plugin" }]
+        // "plugins": [{ "name": "typescript-tslint-plugin" }]
     },
-    "compileOnSave": true,
+    "compileOnSave": true /* Compile files as soon as possible. */,
     "include": ["src/*.ts", "src/**/*.ts", "src/**/*.tsx", "src/*.txs"],
-    "exclude": ["dist", "node_modules", "src/*.test.tsx", "src/*.stories.tsx"]
+    "exclude": [
+        "dist/**",
+        "node_modules/**",
+        "plop-templates/**",
+        "src/**/*.test.tsx",
+        "src/**/*.stories.tsx"
+    ]
 }

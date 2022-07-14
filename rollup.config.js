@@ -7,6 +7,22 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
 const packageJson = require('./package.json');
 
+const plugins = [
+    peerDepsExternal(),
+    resolve(),
+    commonjs(),
+    typescript({ tsconfig: './tsconfig.json' }),
+    terser(),
+];
+const externals = [
+    'react',
+    'react-dom',
+    'styeled-system',
+    'styled-components',
+    'lodash',
+    'polished',
+];
+
 export default [
     {
         input: 'src/index.ts',
@@ -22,24 +38,13 @@ export default [
                 sourcemap: true,
             },
         ],
-        plugins: [
-            peerDepsExternal(),
-            resolve(),
-            commonjs(),
-            typescript({ tsconfig: './tsconfig.json' }),
-            terser(),
-        ],
-        external: [
-            'react',
-            'react-dom',
-            'styled-components',
-            'lodash',
-            'polished',
-        ],
+        plugins: plugins,
+        external: externals,
     },
     {
         input: 'dist/esm/types/index.d.ts',
         output: [{ file: 'dist/index.d.ts', format: 'esm' }],
+        // external: [/\.stories\.tsx$/],
         plugins: [dts()],
     },
 ];

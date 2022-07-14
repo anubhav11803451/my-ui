@@ -2,7 +2,7 @@ import { create } from '@storybook/theming';
 
 export default create({
     base: 'light',
-    brandTitle: 'Celestial UI',
+    brandTitle: 'My UI',
     // brandUrl: 'https://example.com',
     // brandImage: 'https://place-hold.it/350x150',
     // textColor: '#FF4785',

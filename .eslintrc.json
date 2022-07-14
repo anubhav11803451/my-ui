@@ -25,9 +25,9 @@
             "tsx": true
         },
         "createDefaultProgram": true,
-        "ecmaVersion": "latest",
+        "ecmaVersion": 6,
         "sourceType": "module",
-        "project": "./tsconfig.json"
+        "project": ["./tsconfig.eslint.json"]
     },
     "plugins": ["react", "@typescript-eslint", "prettier"],
     "rules": {
@@ -36,9 +36,13 @@
         "react/jsx-uses-react": ["off"],
         "react/jsx-props-no-spreading": ["off"],
         "react/no-unescaped-entities": ["off"],
+        "@typescript-eslint/interface-name-prefix": 0,
+        "@typescript-eslint/no-empty-interface": 0,
+        "object-shorthand": [0, "never"],
         "@typescript-eslint/no-unused-vars": "error",
+        "@typescript-eslint/prefer-default-export": "off",
         // to enforce using type for object type definitions, can be type or interface
-        "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+        // "@typescript-eslint/consistent-type-definitions": ["error", "type"],
         "react/display-name": "off",
         "import/export": 0,
         "indent": [
